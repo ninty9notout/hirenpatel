@@ -234,7 +234,7 @@
 
             @media only print {
                 body {
-                    font-size: 10px;
+                    font-size: 11.9px;
                 }
 
                 a:link, a:visited {
@@ -245,7 +245,7 @@
                     grid-template:
                         "header header"
                         "sidebar main";
-                    grid-template-columns: 33% auto;
+                    grid-template-columns: calc(100% / 3) auto;
                 }
 
                 .header::after {
@@ -265,6 +265,13 @@
 
                 .section + .section {
                     border-top: 1px solid #f5f6fa;
+                }
+
+                .description p,
+                .description ul {
+                    -webkit-column-break-inside: avoid;
+                    page-break-inside: avoid;
+                    break-inside: avoid;
                 }
 
                 .tag-item {
@@ -400,16 +407,18 @@
                                     <span itemprop="startDate">May 2020</span> – Present
                                 </p>
 
-                                <ul itemprop="description">
-                                    <li>All-round development and maintenance of the flagship <a href="https://www.gentingbet.com/">GentingBet</a> online casino&nbsp;website</li>
-                                    <li>Working closely with project managers and designers to make stakeholders vision a&nbsp;reality</li>
-                                    <li>Working closely with QA testers to ensure the most reliable product is made available to our&nbsp;customers</li>
-                                    <li>Prototyping solutions in order to aid the decision-making&nbsp;process</li>
-                                    <li>Analysing and improving existing codebase to create a more robust and efficient&nbsp;application</li>
-                                    <li>Implementing modern web technologies to create the most accessible version of the GentingBet website as&nbsp;possible</li>
-                                    <li>Integrating third-party APIs such as jackpot tickers and live game data to create a more informative experience for our&nbsp;customers</li>
-                                    <li>Understanding and enforcing rules and regulations from the UK Gambling Commission and Malta Gaming&nbsp;Authority</li>
-                                </ul>
+                                <div class="description">
+                                    <ul>
+                                        <li>All-round development and maintenance of the flagship <a href="https://www.gentingbet.com/">GentingBet</a> online casino&nbsp;website</li>
+                                        <li>Working closely with project managers and designers to make stakeholders vision a&nbsp;reality</li>
+                                        <li>Working closely with QA testers to ensure the most reliable product is made available to our&nbsp;customers</li>
+                                        <li>Prototyping solutions in order to aid the decision-making&nbsp;process</li>
+                                        <li>Analysing and improving existing codebase to create a more robust and efficient&nbsp;application</li>
+                                        <li>Implementing modern web technologies to create the most accessible version of the GentingBet website as&nbsp;possible</li>
+                                        <li>Integrating third-party APIs such as jackpot tickers and live game data to create a more informative experience for our&nbsp;customers</li>
+                                        <li>Understanding and enforcing rules and regulations from the UK Gambling Commission and Malta Gaming&nbsp;Authority</li>
+                                    </ul>
+                                </div>
                             </li>
 
                             <li class="employment-item" itemprop="worksFor" itemscope itemtype="http://schema.org/EmployeeRole">
@@ -423,17 +432,19 @@
                                     <span itemprop="startDate">September 2012</span> – <span itemprop="endDate">May 2020</span>
                                 </p>
 
-                                <ul itemprop="description">
-                                    <li>Technical lead of SilverStripe CMS driven&nbsp;projects</li>
-                                    <li>Management of both internal developers and third-party&nbsp;contractors</li>
-                                    <li>Working closely with clients to explore ideas and requests in order to create bespoke solutions that best serves their&nbsp;patrons</li>
-                                    <li>Implementation of back-end systems including, but not limited to, integration of third-party systems, APIs, and payment processors - Tessitura, Spektrix, Vimeo, Cloudinary, Windcave (formally Payment Express), Worldpay (formally&nbsp;Vantiv)</li>
-                                    <li>Developing projects using HTML, JavaScript (vanilla, Angular, Vue.js), and CSS (Less,&nbsp;SASS)</li>
-                                    <li>Architecting efficient, high performant, and highly reliable&nbsp;applications</li>
-                                    <li>Analysing databases and writing advance SQL stored procedures that provides highly customised data based on customer interests and&nbsp;behaviour</li>
-                                    <li>Attending and speaking at <a href="https://stripecon.eu/">StripeCon EU</a> - a European community conference dedicated to the SilverStripe Framework &amp; CMS</li>
-                                    <li>Projects including <a href="https://www.royalalberthall.com/">Royal Albert Hall</a>, <a href="https://www.wmc.org.uk/">Wales Millennium Centre</a>, <a href="https://www.roundhouse.org.uk/">Roundhouse</a>, <a href="https://www.centertheatregroup.org/">Center Theatre Group</a>, <a href="https://www.laphil.com/">Los Angeles Philharmonic</a>, <a href="https://www.nycballet.com/">New York City Ballet</a>, <a href="https://www.92y.org/">92nd Street Y (92Y)</a>, <a href="https://www.mtc.com.au/">Melbourne Theatre Company</a>, and many&nbsp;others</li>
-                                </ul>
+                                <div class="description">
+                                    <ul>
+                                        <li>Technical lead of SilverStripe CMS driven&nbsp;projects</li>
+                                        <li>Management of both internal developers and third-party&nbsp;contractors</li>
+                                        <li>Working closely with clients to explore ideas and requests in order to create bespoke solutions that best serves their&nbsp;patrons</li>
+                                        <li>Implementation of back-end systems including, but not limited to, integration of third-party systems, APIs, and payment processors - Tessitura, Spektrix, Vimeo, Cloudinary, Windcave (formally Payment Express), Worldpay (formally&nbsp;Vantiv)</li>
+                                        <li>Developing projects using HTML, JavaScript (vanilla, Angular, Vue.js), and CSS (Less,&nbsp;SASS)</li>
+                                        <li>Architecting efficient, high performant, and highly reliable&nbsp;applications</li>
+                                        <li>Analysing databases and writing advance SQL stored procedures that provides highly customised data based on customer interests and&nbsp;behaviour</li>
+                                        <li>Attending and speaking at <a href="https://stripecon.eu/">StripeCon EU</a> - a European community conference dedicated to the SilverStripe Framework &amp; CMS</li>
+                                        <li>Projects including <a href="https://www.royalalberthall.com/">Royal Albert Hall</a>, <a href="https://www.wmc.org.uk/">Wales Millennium Centre</a>, <a href="https://www.roundhouse.org.uk/">Roundhouse</a>, <a href="https://www.centertheatregroup.org/">Center Theatre Group</a>, <a href="https://www.laphil.com/">Los Angeles Philharmonic</a>, <a href="https://www.nycballet.com/">New York City Ballet</a>, <a href="https://www.92y.org/">92nd Street Y (92Y)</a>, <a href="https://www.mtc.com.au/">Melbourne Theatre Company</a>, and many&nbsp;others</li>
+                                    </ul>
+                                </div>
                             </li>
                         </ul>
                     </div>
@@ -451,7 +462,7 @@
                                     <p>GentingBet is the online casino and sportsbook brand of Genting. It provides premium, distinctive and socially responsible online gaming experience that draws upon Genting's many years of expertise from around the world.</p>
 
                                     <ul>
-                                        <li>Day to day operation&nbsp;development</li>
+                                        <li>Day-to-day operational&nbsp;development</li>
                                         <li>Liaising with stakeholders to implement innovative new&nbsp;features</li>
                                         <li>Auditing performance and search engine optimization to improve the quality of the&nbsp;website</li>
                                         <li>Cross-browser testing and debugging to make sure the website is as widely available as&nbsp;possible</li>
