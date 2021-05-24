@@ -43,6 +43,11 @@
                 margin: 0;
             }
 
+            wbr:before {
+                content: "\200B";
+                white-space: normal;
+            }
+
             .container {
                 text-align: center;
             }
@@ -115,10 +120,18 @@
             }
 
             .section__heading {
-                margin: 0 0 1em;
+                margin: 0;
                 text-transform: uppercase;
                 font-size: 0.9em;
                 color: #718093;
+                background: -moz-linear-gradient(top, rgba(245, 246, 250, 1) 0%, rgba(245, 246, 250, 1) 70%, rgba(245, 246, 250, 0) 100%); /* FF3.6-15 */
+                background: -webkit-linear-gradient(top, rgba(245, 246, 250, 1) 0%, rgba(245, 246, 250, 1) 70%, rgba(245, 246, 250, 0) 100%); /* Chrome10-25,Safari5.1-6 */
+                background: linear-gradient(to bottom, rgba(245, 246, 250, 1) 0%, rgba(245, 246, 250, 1) 70%, rgba(245, 246, 250, 0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+                position: sticky;
+                top: 0;
+                padding: 0.5555555556em 0.5555555556em 1em;
+                margin-top: -0.5555555556em;
+                margin-left: -0.5555555556em;
             }
 
             .section__duration {
@@ -126,7 +139,7 @@
                 margin-bottom: .5em;
             }
 
-            .address p + p {
+            .summary p + p {
                 margin-top: 1em;
             }
 
@@ -161,6 +174,8 @@
                 margin-top: .5em;
             }
 
+            .employment-item .description p + p,
+            .employment-item .description p + ul,
             .project-item .description p + p,
             .project-item .description p + ul {
                 margin-top: .5em;
@@ -234,7 +249,7 @@
 
             @media only print {
                 body {
-                    font-size: 11.9px;
+                    font-size: 11.4px;
                 }
 
                 a:link, a:visited {
@@ -290,23 +305,23 @@
                 </div>
 
                 <div class="sidebar">
-                    <!-- <div class="section address">
-                        <p itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
+                    <div class="section summary">
+                        <h2 class="section__heading">Hi, nice to meet you!</h2>
+
+                        <!-- <p itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
                             <span itemprop="streetAddress">6 Tanfield Road</span><br>
                             <span itemprop="addressLocality">Dudley</span><br>
                             <span itemprop="addressRegion">West Midlands</span><br>
                             <span itemprop="postalCode">DY2 8XE</span><br>
                             <span itemprop="addressCountry">United Kingdom</span>
-                        </p>
+                        </p> -->
+
+                        <p itemprop="description">I am an experienced full-stack developer with extensive background in high-traffic, API driven, and transactional applications. Throughout my career I've strived to be proficient at all aspects of development - be it creating efficient, cost-effective back-end systems or state of the art, pixel perfect front-end designs. I've led multiple cross-functional teams at a time in my capacity as a technical lead and senior developer to deliver world-class projects for well-established  organisations around the&nbsp;globe.</p>
 
                         <p>
                             <a href="mailto:hieroishere@outlook.com"><span itemprop="email">hieroishere@outlook.com</span></a><br>
                             <a href="tel:+447707934908"><span itemprop="telephone">+44 7707 934908</span></a>
                         </p>
-                    </div> -->
-
-                    <div class="section" itemprop="description">
-                        I am an experienced full-stack developer with extensive background in high-traffic, API driven, and transactional applications. Throughout my career I've strived to be proficient at all aspects of development - be it creating efficient, cost-effective back-end systems or state of the art, pixel perfect front-end designs. I've led multiple cross-functional teams at a time in my capacity as a technical lead and senior developer to deliver world-class projects for well-established  organisations around the&nbsp;globe.
                     </div>
 
                     <div class="section">
@@ -407,7 +422,9 @@
                                     <span itemprop="startDate">May 2020</span> – Present
                                 </p>
 
-                                <div class="description">
+                                <div class="description" itemprop="description">
+                                    <p>Genting Casinos UK is part of the Genting Group, a global multinational organisation renowned for developing, operating and marketing internationally acclaimed casinos and integrated resorts across the world.</p>
+
                                     <ul>
                                         <li>All-round development and maintenance of the flagship <a href="https://www.gentingbet.com/">GentingBet</a> online casino&nbsp;website</li>
                                         <li>Working closely with project managers and designers to make stakeholders vision a&nbsp;reality</li>
@@ -432,7 +449,9 @@
                                     <span itemprop="startDate">September 2012</span> – <span itemprop="endDate">May 2020</span>
                                 </p>
 
-                                <div class="description">
+                                <div class="description" itemprop="description">
+                                    <p>Made Media is a digital design and strategy agency helping live performance and cultural organisations use technology to connect with their audiences and do better business.</p>
+
                                     <ul>
                                         <li>Technical lead of SilverStripe CMS driven&nbsp;projects</li>
                                         <li>Management of both internal developers and third-party&nbsp;contractors</li>
@@ -442,7 +461,7 @@
                                         <li>Architecting efficient, high performant, and highly reliable&nbsp;applications</li>
                                         <li>Analysing databases and writing advance SQL stored procedures that provides highly customised data based on customer interests and&nbsp;behaviour</li>
                                         <li>Attending and speaking at <a href="https://stripecon.eu/">StripeCon EU</a> - a European community conference dedicated to the SilverStripe Framework &amp; CMS</li>
-                                        <li>Projects including <a href="https://www.royalalberthall.com/">Royal Albert Hall</a>, <a href="https://www.wmc.org.uk/">Wales Millennium Centre</a>, <a href="https://www.roundhouse.org.uk/">Roundhouse</a>, <a href="https://www.centertheatregroup.org/">Center Theatre Group</a>, <a href="https://www.laphil.com/">Los Angeles Philharmonic</a>, <a href="https://www.nycballet.com/">New York City Ballet</a>, <a href="https://www.92y.org/">92nd Street Y (92Y)</a>, <a href="https://www.mtc.com.au/">Melbourne Theatre Company</a>, and many&nbsp;others</li>
+                                        <li>Projects including <a href="https://www.royalalberthall.com/">Royal Albert Hall</a>, <a href="https://www.wmc.org.uk/">Wales Millennium Centre</a>, <a href="https://www.roundhouse.org.uk/">Roundhouse</a>, <a href="https://www.centertheatregroup.org/">Center Theatre Group</a>, <a href="https://www.laphil.com/">Los Angeles Philharmonic</a>, <a href="https://www.nycballet.com/">New York City Ballet</a>, <a href="https://www.92y.org/">92nd Street Y (92Y)</a>, <a href="https://www.mtc.com.au/">Melbourne Theatre Company (MTC)</a>, and many&nbsp;others</li>
                                     </ul>
                                 </div>
                             </li>
@@ -456,7 +475,7 @@
                             <li class="project-item" itemprop="knowsAbout" itemscope itemtype="https://schema.org/WebSite">
                                 <h3 itemprop="name">GentingBet</h3>
 
-                                <p><a href="https://www.gentingbet.com/" itemprop="url">https://www.gentingbet.com/</a></p>
+                                <p><a href="https://www.gentingbet.com/" class="url" itemprop="url">https://www.gentingbet.com/</a></p>
 
                                 <div class="description" itemprop="description">
                                     <p>GentingBet is the online casino and sportsbook brand of Genting. It provides premium, distinctive and socially responsible online gaming experience that draws upon Genting's many years of expertise from around the world.</p>
@@ -490,7 +509,7 @@
                             <li class="project-item" itemprop="knowsAbout" itemscope itemtype="https://schema.org/WebSite">
                                 <h3 itemprop="name">Los Angeles Philharmonic</h3>
 
-                                <p><a href="https://www.laphil.com/" itemprop="url">https://www.laphil.com/</a></p>
+                                <p><a href="https://www.laphil.com/" class="url" itemprop="url">https://www.laphil.com/</a></p>
 
                                 <div class="description" itemprop="description">
                                     <p>The LA Phil presents an inspiring array of music from all genres at two of L.A.'s iconic venues, Walt Disney Concert Hall and the Hollywood Bowl, to audiences of all ages and economic backgrounds. With the preeminent Los Angeles Philharmonic orchestra at the foundation of its offerings, the LA Phil aims to enrich and transform lives through music, with a robust mix of artistic, education and community programs.</p>
@@ -528,7 +547,7 @@
                             <li class="project-item" itemprop="knowsAbout" itemscope itemtype="https://schema.org/WebSite">
                                 <h3 itemprop="name">Royal Albert Hall</h3>
 
-                                <p><a href="https://www.royalalberthall.com/" itemprop="url">https://www.royalalberthall.com/</a></p>
+                                <p><a href="https://www.royalalberthall.com/" class="url" itemprop="url">https://www.royalalberthall.com/</a></p>
 
                                 <div class="description" itemprop="description">
                                     <p>The Royal Albert Hall is the world's most famous stage. Its breath-taking auditorium hosts over 370 shows a year by the world's greatest artists. The magical atmosphere combined with inspired artists creates legendary events.</p>
@@ -562,7 +581,7 @@
                             <li class="project-item" itemprop="knowsAbout" itemscope itemtype="https://schema.org/WebSite">
                                 <h3 itemprop="name">Center Theatre Group</h3>
 
-                                <p><a href="https://www.centertheatregroup.org/" itemprop="url">https://www.centertheatregroup.org/</a></p>
+                                <p><a href="https://www.centertheatregroup.org/" class="url" itemprop="url">https://www.centertheatregroup.org/</a></p>
 
                                 <div class="description" itemprop="description">
                                     <p>Center Theatre Group, one of the nation's preeminent arts and cultural organizations, is Los Angeles' leading non-profit theatre company, programming seasons at the Mark Taper Forum and Ahmanson Theatre at The Music Center in Downtown Los Angeles, and the Kirk Douglas Theatre in Culver City.</p>
@@ -599,5 +618,16 @@
                 </div>
             </div>
         </div>
+
+        <script>
+            document.querySelectorAll('.url').forEach(function (link) {
+                link.innerHTML = link.textContent.split('//').map(function (part) {
+                    return part
+                        .replace(/(?<after>:)/giu, '$1<wbr>')
+                        .replace(/(?<before>[/~.,\-_?#%])/giu, '<wbr>$1')
+                        .replace(/(?<beforeAndAfter>[=&])/giu, '<wbr>$1<wbr>');
+                }).join('//<wbr>');
+            });
+        </script>
     </body>
 </html>
