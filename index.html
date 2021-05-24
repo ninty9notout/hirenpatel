@@ -1,0 +1,592 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1">
+        <title>Hiren Patel CV 2021</title>
+
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous" referrerpolicy="no-referrer">
+        <link href="https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Poppins:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+
+        <style>
+            body {
+                background-color: #f5f6fa;
+                color: #2f3640;
+                font-family: "PT Serif", serif;
+                font-size: 20px;
+                font-weight: 400;
+                line-height: 1.5;
+            }
+
+            h1, h2 {
+                font-family: "Poppins", sans-serif;
+                font-weight: 700;
+            }
+
+            p {
+                margin: 0;
+            }
+
+            a:link, a:visited {
+                color: #c23616;
+                text-decoration: none;
+            }
+
+            a:hover {
+                text-decoration: underline;
+            }
+
+            ul {
+                margin: 0;
+            }
+
+            .container {
+                text-align: center;
+            }
+
+            .wrapper {
+                margin: 0 auto;
+                text-align: left;
+                width: 100%;
+                display: grid;
+                grid-template-areas:
+                    "header"
+                    "sidebar"
+                    "main";
+            }
+
+            .header {
+                grid-area: header;
+                padding: 1.5em;
+                position: relative;
+            }
+
+            .header::after {
+                content: "";
+                position: absolute;
+                top: auto;
+                right: 1.5em;
+                bottom: 0;
+                left: 1.5em;
+                border-top: 1px solid #dcdde1;
+            }
+
+            .sidebar {
+                grid-area: sidebar;
+                padding: 1.5em;
+                position: relative;
+            }
+
+            .sidebar::after {
+                content: "";
+                position: absolute;
+                top: auto;
+                right: 1.5em;
+                bottom: 0;
+                left: 1.5em;
+                border-top: 1px solid #dcdde1;
+            }
+
+            .main {
+                grid-area: main;
+                padding: 1.5em;
+            }
+
+            .branding {
+                margin: 0 0 .25em;
+                line-height: 1;
+                text-transform: uppercase;
+            }
+
+            .tagline {
+                color: #718093;
+                font-weight: 700;
+                line-height: 1;
+                margin: 0;
+            }
+
+            .section + .section {
+                padding-top: 1.5em;
+                margin-top: 1.5em;
+                border-top: 1px solid #dcdde1;
+            }
+
+            .section__heading {
+                margin: 0 0 1em;
+                text-transform: uppercase;
+                font-size: 0.9em;
+                color: #718093;
+            }
+
+            .section__duration {
+                margin-top: .5em;
+                margin-bottom: .5em;
+            }
+
+            .address p + p {
+                margin-top: 1em;
+            }
+
+            .education-list,
+            .employment-list,
+            .project-list {
+                list-style: none;
+                padding-left: 0;
+            }
+
+            .education-item + .education-item,
+            .employment-item + .employment-item,
+            .project-item + .project-item {
+                margin-top: 1.5em;
+            }
+
+            .education-item h3,
+            .employment-item h3,
+            .project-item h3 {
+                font-size: 1.1em;
+                font-weight: 700;
+                margin: 0;
+            }
+
+            .employment-item h4 {
+                font-size: 0.9em;
+                font-weight: 700;
+                margin: 0;
+            }
+
+            .employment-list ul {
+                list-style-type: disc;
+            }
+
+            .project-item .description {
+                margin-top: .5em;
+            }
+
+            .project-item .description p + p,
+            .project-item .description p + ul {
+                margin-top: .5em;
+            }
+
+            .tag-list {
+                list-style: none;
+                padding-left: 0;
+                font-size: 0.9em;
+                line-height: 1;
+                display: flex;
+                flex-flow: row;
+                flex-wrap: wrap;
+                gap: 0.2777777778em;
+            }
+
+            .tag-item {
+                background-color: #dcdde1;
+                white-space: nowrap;
+                padding: 0.2777777778em;
+                border-radius: 0.1666666667em;
+            }
+
+            .tags span {
+                font-size: 0.8em;
+                line-height: 1;
+                background-color: #dcdde1;
+                white-space: nowrap;
+                padding: 0.2777777778em;
+                border-radius: 0.1666666667em;
+            }
+
+            @media only screen and (min-width: 1024px) {
+                .wrapper {
+                    grid-template:
+                        "header header"
+                        "sidebar main";
+                    grid-template-columns: calc(100% / 3) auto;
+                }
+
+                .sidebar::after {
+                    content: "";
+                    position: absolute;
+                    top: 1.5em;
+                    right: 0;
+                    bottom: 1.5em;
+                    left: auto;
+                    border-top: none;
+                    border-left: 1px solid #dcdde1;
+                }
+            }
+
+            @media only screen and (min-width: 1366px) {
+                .header {
+                    padding: 2em;
+                }
+
+                .sidebar {
+                    padding: 2em;
+                }
+
+                .main {
+                    padding: 2em;
+                }
+
+                .section + .section {
+                    padding-top: 2em;
+                    margin-top: 2em;
+                }
+            }
+
+            @media only print {
+                body {
+                    font-size: 11px;
+                }
+
+                .wrapper {
+                    grid-template:
+                        "header header"
+                        "sidebar main";
+                    grid-template-columns: calc(100% / 3) auto;
+                }
+
+                .header::after {
+                    border-top: 1px solid #f5f6fa;
+                }
+
+                .sidebar::after {
+                    content: "";
+                    position: absolute;
+                    top: 1.5em;
+                    right: 0;
+                    bottom: 1.5em;
+                    left: auto;
+                    border-top: none;
+                    border-left: 1px solid #f5f6fa;
+                }
+
+                .section + .section {
+                    border-top: 1px solid #f5f6fa;
+                }
+
+                .tag-item {
+                    background-color: #f5f6fa;
+                    -webkit-print-color-adjust: exact !important;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container" itemscope itemtype="https://schema.org/Person">
+            <div class="wrapper">
+                <div class="header">
+                    <h1 class="branding" itemprop="name">Hiren Patel</h1>
+                    <p class="tagline" itemprop="jobTitle">Senior Full-stack Developer</p>
+                </div>
+
+                <div class="sidebar">
+                    <div class="section address">
+                        <p itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
+                            <span itemprop="streetAddress">6 Tanfield Road</span><br>
+                            <span itemprop="addressLocality">Dudley</span><br>
+                            <span itemprop="addressRegion">West Midlands</span><br>
+                            <span itemprop="postalCode">DY2 8XE</span><br>
+                            <span itemprop="addressCountry">United Kingdom</span>
+                        </p>
+
+                        <p>
+                            <a href="mailto:hieroishere@outlook.com"><span itemprop="email">hieroishere@outlook.com</span></a><br>
+                            <a href="tel:+447707934908"><span itemprop="telephone">+44 7707 934908</span></a>
+                        </p>
+                    </div>
+
+                    <div class="section" itemprop="description">
+                        I am an experienced full-stack developer with extensive background in high-traffic, API driven, and transactional applications. Throughout my career I've strived to be proficient at all aspects of development - be it creating efficient, cost-effective back-end systems or state of the art, pixel perfect front-end designs. I've led multiple cross-functional teams at a time in my capacity as a technical lead and senior developer to deliver world-class projects for well-established  organisations around the&nbsp;globe.
+                    </div>
+
+                    <div class="section">
+                        <h2 class="section__heading">Education</h2>
+
+                        <ul class="education-list">
+                            <li class="education-item" itemprop="alumniOf" itemscope itemtype="https://schema.org/OrganizationRole">
+                                <h3 itemprop="alumniOf" itemscope itemtype="https://schema.org/CollegeOrUniversity">
+                                    <span itemprop="name">University of Wolverhampton</span>
+                                </h3>
+
+                                <p class="section__duration">
+                                    <span itemprop="startDate">September 2008</span> – <span itemprop="endDate">May 2012</span>
+                                </p>
+
+                                <p>2.1 in Computer Science (Games&nbsp;Development)</p>
+                            </li>
+
+                            <li class="education-item" itemprop="alumniOf" itemscope itemtype="https://schema.org/OrganizationRole">
+                                <h3 itemprop="alumniOf" itemscope itemtype="https://schema.org/CollegeOrUniversity">
+                                    <span itemprop="name">Halesowen College</span>
+                                </h3>
+
+                                <p class="section__duration">
+                                    <span itemprop="startDate">September 2006</span> – <span itemprop="endDate">April 2008</span>
+                                </p>
+
+                                <p>Computing, Applied ICT, Business Studies, and Film&nbsp;Studies.</p>
+                            </li>
+
+                            <li class="education-item" itemprop="alumniOf" itemscope itemtype="https://schema.org/OrganizationRole">
+                                <h3 itemprop="alumniOf" itemscope itemtype="https://schema.org/CollegeOrUniversity">
+                                    <span itemprop="name">Holly Hall Academy</span>
+                                </h3>
+
+                                <p class="section__duration">
+                                    <span itemprop="startDate">September 2001</span> – <span itemprop="endDate">May 2006</span>
+                                </p>
+
+                                <p>11 GCSE's including Mathematics, Science, and&nbsp;English.</p>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="section">
+                        <h2 class="section__heading">Skills &amp; Expertise</h2>
+
+                        <ul class="tag-list">
+                            <li class="tag-item">PHP</li>
+                            <li class="tag-item">Java</li>
+                            <li class="tag-item">SQL (multiple variants)</li>
+                            <li class="tag-item">Objective C</li>
+                            <li class="tag-item">C++</li>
+                            <li class="tag-item">.NET</li>
+                            <li class="tag-item">JavaScript</li>
+                            <li class="tag-item">Node.js</li>
+                            <li class="tag-item">jQuery</li>
+                            <li class="tag-item">React</li>
+                            <li class="tag-item">Angular</li>
+                            <li class="tag-item">Vue.js</li>
+                            <li class="tag-item">HTML</li>
+                            <li class="tag-item">CSS (Less, Sass, JSS)</li>
+                            <li class="tag-item">AWS</li>
+                            <li class="tag-item">SilverStripe (CMS, Framework)</li>
+                            <li class="tag-item">WordPress</li>
+                            <li class="tag-item">Craft CMS</li>
+                            <li class="tag-item">Kentico CMS</li>
+                            <li class="tag-item">Doctrine</li>
+                            <li class="tag-item">Symfony</li>
+                            <li class="tag-item">Web Standards</li>
+                            <li class="tag-item">Search Engine Optimization</li>
+                            <li class="tag-item">Software Engineering</li>
+                            <li class="tag-item">Database Design</li>
+                            <li class="tag-item">Database Analysis</li>
+                            <li class="tag-item">Solution Architecture</li>
+                            <li class="tag-item">MVC Architecutre</li>
+                            <li class="tag-item">Quality Assurance</li>
+                            <li class="tag-item">Rapid Prototyping</li>
+                            <li class="tag-item">Web Design</li>
+                            <li class="tag-item">UX Design</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="main">
+                    <div class="section">
+                        <h2 class="section__heading">Experience</h2>
+
+                        <ul class="employment-list">
+                            <li class="employment-item" itemprop="worksFor" itemscope itemtype="http://schema.org/EmployeeRole">
+                                <h3 itemprop="roleName">Web Developer</h3>
+
+                                <h4 itemprop="worksFor" itemscope itemtype="https://schema.org/Organization">
+                                    <a href="https://www.gentingcasino.com/casinos/" itemprop="name">Genting Casinos UK</a>
+                                </h4>
+
+                                <p class="section__duration">
+                                    <span itemprop="startDate">May 2020</span> – Present
+                                </p>
+
+                                <ul itemprop="description">
+                                    <li>All-round development and maintenance of the flagship <a href="https://www.gentingbet.com/">GentingBet</a> online casino&nbsp;website</li>
+                                    <li>Working closely with project managers and designers to make stakeholders vision a&nbsp;reality</li>
+                                    <li>Working closely with QA testers to ensure the most reliable product is made available to our&nbsp;customers</li>
+                                    <li>Prototyping solutions in order to aid the decision-making&nbsp;process</li>
+                                    <li>Analysing and improving existing codebase to create a more robust and efficient&nbsp;application</li>
+                                    <li>Implementing modern web technologies to create the most accessible version of the GentingBet website as&nbsp;possible</li>
+                                    <li>Integrating third-party APIs such as jackpot tickers and live game data to create a more informative experience for our&nbsp;customers</li>
+                                    <li>Understanding and enforcing rules and regulations from the UK Gambling Commission and Malta Gaming&nbsp;Authority</li>
+                                </ul>
+                            </li>
+
+                            <li class="employment-item" itemprop="worksFor" itemscope itemtype="http://schema.org/EmployeeRole">
+                                <h3 itemprop="roleName">Lead Developer</h3>
+
+                                <h4 itemprop="worksFor" itemscope itemtype="https://schema.org/Organization">
+                                    <a href="https://made.media/" itemprop="name">Made Media Ltd.</a>
+                                </h4>
+
+                                <p class="section__duration">
+                                    <span itemprop="startDate">September 2012</span> – <span itemprop="endDate">May 2020</span>
+                                </p>
+
+                                <ul itemprop="description">
+                                    <li>Technical lead of SilverStripe CMS driven&nbsp;projects</li>
+                                    <li>Management of both internal developers and third-party&nbsp;contractors</li>
+                                    <li>Working closely with clients to explore ideas and requests in order to create bespoke solutions that best serves their&nbsp;patrons</li>
+                                    <li>Implementation of back-end systems including, but not limited to, integration of third-party systems, APIs, and payment processors - Tessitura, Spektrix, Vimeo, Cloudinary, Windcave (formally Payment Express), Worldpay (formally&nbsp;Vantiv)</li>
+                                    <li>Developing projects using HTML, JavaScript (vanilla, Angular, Vue.js), and CSS (Less,&nbsp;SASS)</li>
+                                    <li>Architecting efficient, high performant, and highly reliable&nbsp;applications</li>
+                                    <li>Analysing databases and writing advance SQL stored procedures that provides highly customised data based on customer interests and&nbsp;behaviour</li>
+                                    <li>Attending and speaking at <a href="https://stripecon.eu/">StripeCon EU</a> - a European community conference dedicated to the SilverStripe Framework &amp; CMS</li>
+                                    <li>Projects including <a href="https://www.royalalberthall.com/">Royal Albert Hall</a>, <a href="https://www.wmc.org.uk/">Wales Millennium Centre</a>, <a href="https://www.roundhouse.org.uk/">Roundhouse</a>, <a href="https://www.centertheatregroup.org/">Center Theatre Group</a>, <a href="https://www.laphil.com/">Los Angeles Philharmonic</a>, <a href="https://www.nycballet.com/">New York City Ballet</a>, <a href="https://www.92y.org/">92nd Street Y (92Y)</a>, <a href="https://www.mtc.com.au/">Melbourne Theatre Company</a>, and many&nbsp;others</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="section">
+                        <h2 class="section__heading">Projects</h2>
+
+                        <ul class="project-list">
+                            <li class="project-item" itemprop="knowsAbout" itemscope itemtype="https://schema.org/WebSite">
+                                <h3 itemprop="name">GentingBet</h3>
+
+                                <p><a href="https://www.gentingbet.com/" itemprop="url">https://www.gentingbet.com/</a></p>
+
+                                <div class="description" itemprop="description">
+                                    <p>GentingBet is the online casino and sportsbook brand of Genting. It provides premium, distinctive and socially responsible online gaming experience that draws upon Genting's many years of expertise from around the world.</p>
+
+                                    <ul>
+                                        <li>Day to day operation&nbsp;development</li>
+                                        <li>Liaising with stakeholders to implement innovative new&nbsp;features</li>
+                                        <li>Auditing performance and search engine optimization to improve the quality of the&nbsp;website</li>
+                                        <li>Cross-browser testing and debugging to make sure the website is as widely available as&nbsp;possible</li>
+                                        <li>Integration of iCore online gaming&nbsp;platform</li>
+                                        <li>Integration of games provided by third-party in to the&nbsp;website</li>
+                                        <li>
+                                            <ul class="tag-list">
+                                                <li class="tag-item">JavaScript</li>
+                                                <li class="tag-item">React</li>
+                                                <li class="tag-item">CSS (JSS)</li>
+                                                <li class="tag-item">PHP</li>
+                                                <li class="tag-item">Craft CMS</li>
+                                                <li class="tag-item">Web Standards</li>
+                                                <li class="tag-item">Search Engine Optimization</li>
+                                                <li class="tag-item">Quality Assurance</li>
+                                                <li class="tag-item">Rapid Prototyping</li>
+                                                <li class="tag-item">Web Design</li>
+                                                <li class="tag-item">UX Design</li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+
+                            <li class="project-item" itemprop="knowsAbout" itemscope itemtype="https://schema.org/WebSite">
+                                <h3 itemprop="name">Los Angeles Philharmonic</h3>
+
+                                <p><a href="https://www.laphil.com/" itemprop="url">https://www.laphil.com/</a></p>
+
+                                <div class="description" itemprop="description">
+                                    <p>The LA Phil presents an inspiring array of music from all genres at two of L.A.'s iconic venues, Walt Disney Concert Hall and the Hollywood Bowl, to audiences of all ages and economic backgrounds. With the preeminent Los Angeles Philharmonic orchestra at the foundation of its offerings, the LA Phil aims to enrich and transform lives through music, with a robust mix of artistic, education and community programs.</p>
+
+                                    <ul>
+                                        <li>Lead developer answering directly to project manager and client, and managing a team of front-end and back-end developers</li>
+                                        <li>Attending discovery sessions with the clients to provide a bespoke solution to shortcomings presented by their existing&nbsp;platform</li>
+                                        <li>Review of their existing Django, a Python based CMS, code base in order to port it over to the SilverStripe&nbsp;CMS</li>
+                                        <li><a href="https://www.youtube.com/watch?v=KBVDyVtCveQ">Reverse engineering their existing database in order to automate porting over the Python code base to PHP and PostgreSQL database to&nbsp;MySQL</a></li>
+                                        <li>One CMS, three websites - multi site support to allow the maintenance of three full websites running off a single CMS and database (LA Phil, <a href="https://www.hollywoodbowl.com/">Hollywood Bowl</a>, <a href="https://www.theford.com/">The&nbsp;Ford</a>)</li>
+                                        <li>Implementing edit-in-place functionality that allows to content managers to edit content on the front-end without having to open up the&nbsp;CMS</li>
+                                        <li>Implementing a comprehensive block editor to allow drag-and-drop editing of&nbsp;content</li>
+                                        <li>Implementing Google-like categorised search portal to allow customers to easily discover content using the third-party Swiftype&nbsp;service</li>
+                                        <li>Implementing multilingual support for English and Spanish using the third-party Weglot&nbsp;service</li>
+                                        <li>Implementing a powerful and well-informed events&nbsp;calendar in JavaScript using custom wrote APIs</li>
+                                        <li>Regular calls with the clients to ensure regular releases of new features goes ahead without any&nbsp;issues</li>
+                                        <li>
+                                            <ul class="tag-list">
+                                                <li class="tag-item">PHP</li>
+                                                <li class="tag-item">Python</li>
+                                                <li class="tag-item">MySQL</li>
+                                                <li class="tag-item">T-SQL</li>
+                                                <li class="tag-item">PostgreSQL</li>
+                                                <li class="tag-item">JavaScript</li>
+                                                <li class="tag-item">Marionette.js</li>
+                                                <li class="tag-item">CSS (Sass)</li>
+                                                <li class="tag-item">CloudFront (AWS)</li>
+                                                <li class="tag-item">EC2 (AWS)</li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+
+                            <li class="project-item" itemprop="knowsAbout" itemscope itemtype="https://schema.org/WebSite">
+                                <h3 itemprop="name">Royal Albert Hall</h3>
+
+                                <p><a href="https://www.royalalberthall.com/" itemprop="url">https://www.royalalberthall.com/</a></p>
+
+                                <div class="description" itemprop="description">
+                                    <p>The Royal Albert Hall is the world's most famous stage. Its breath-taking auditorium hosts over 370 shows a year by the world's greatest artists. The magical atmosphere combined with inspired artists creates legendary events.</p>
+
+                                    <ul>
+                                        <li>Lead developer answering directly to project manager and client, and managing a team of back-end developers</li>
+                                        <li>Implemented the BBC Proms Planner to allow patrons to curate the individual proms they'd like to purchase tickets for in bulk when the tickets go on&nbsp;sale</li>
+                                        <li>Overlooking the yearly launch and on sale of the BBC Proms to ensure all patrons get their desired tickets for the&nbsp;Proms</li>
+                                        <li>Writing highly optimised code that will stay stable with large amount of on sale&nbsp;traffic</li>
+                                        <li>Working with the people from the Hall to ensure the site keeps ticking&nbsp;over</li>
+                                        <li>Liaising with third-party providers and agencies to ensure all of client requests are met to the highest&nbsp;standards</li>
+                                        <li>Integration of third-party digital asset management system (DAMS) to ensure all the clients organisation wide assets are available in one&nbsp;place</li>
+                                        <li>
+                                            <ul class="tag-list">
+                                                <li class="tag-item">PHP</li>
+                                                <li class="tag-item">MySQL</li>
+                                                <li class="tag-item">T-SQL</li>
+                                                <li class="tag-item">JavaScript</li>
+                                                <li class="tag-item">jQuery</li>
+                                                <li class="tag-item">CSS (Less)</li>
+                                                <li class="tag-item">CloudFront (AWS)</li>
+                                                <li class="tag-item">EC2 (AWS)</li>
+                                                <li class="tag-item">CloudSearch (AWS)</li>
+                                                <li class="tag-item">S3 (AWS)</li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+
+                            <li class="project-item" itemprop="knowsAbout" itemscope itemtype="https://schema.org/WebSite">
+                                <h3 itemprop="name">Center Theatre Group</h3>
+
+                                <p><a href="https://www.centertheatregroup.org/" itemprop="url">https://www.centertheatregroup.org/</a></p>
+
+                                <div class="description" itemprop="description">
+                                    <p>Center Theatre Group, one of the nation's preeminent arts and cultural organizations, is Los Angeles' leading non-profit theatre company, programming seasons at the Mark Taper Forum and Ahmanson Theatre at The Music Center in Downtown Los Angeles, and the Kirk Douglas Theatre in Culver City.</p>
+
+                                    <ul>
+                                        <li>Lead developer answering directly to project manager and client, and managing a team of front-end and back-end&nbsp;developers</li>
+                                        <li>Integration of Tessitura, a third-party CRM software, that caters to arts and cultural organisations for all their ticketing and admissions, fundraising, and memberships&nbsp;needs</li>
+                                        <li>Integration of both REST and SOAP endpoints to bring the functionality of Tessitura to the&nbsp;web</li>
+                                        <li>Integration of Element Express, a payment processor from Worldpay (formally Vantiv), to allow purchasing of tickets and memberships&nbsp;online</li>
+                                        <li>CMS development and customisations to fit the requirements of the&nbsp;client</li>
+                                        <li>Working collaboratively with the CTG team to produce a website of the highest quality</li>
+                                        <li>Development of modularised Angular components that can be dropped anywhere on the&nbsp;site</li>
+                                        <li>Implementation of a fully integrated purchase path that goes from finding tickets and adding to cart to providing delivery details and checking&nbsp;out</li>
+                                        <li>Writing SQL stored procedures that provides streamlined data for use on the front-end&nbsp;efficiently</li>
+                                        <li>Integration of third-party digital asset management system (DAMS) to ensure all the clients organisation wide assets are available in one&nbsp;place</li>
+                                        <li>
+                                            <ul class="tag-list">
+                                                <li class="tag-item">PHP</li>
+                                                <li class="tag-item">MySQL</li>
+                                                <li class="tag-item">T-SQL</li>
+                                                <li class="tag-item">JavaScript</li>
+                                                <li class="tag-item">Angular</li>
+                                                <li class="tag-item">CSS (Less)</li>
+                                                <li class="tag-item">CloudFront (AWS)</li>
+                                                <li class="tag-item">EC2 (AWS)</li>
+                                                <li class="tag-item">S3 (AWS)</li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
