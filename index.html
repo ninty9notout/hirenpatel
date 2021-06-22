@@ -3,7 +3,7 @@
     <head>
         <title>Hiren Patel CV 2021</title>
         <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1">
+        <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1">
         <meta name="title" content="Hiren Patel CV 2021">
         <meta name="description" content="Experienced full-stack developer specialising in high-traffic, API driven, and transactional applications, with extensive background in cultural institutions and, as of late, the world of online gambling.">
 
@@ -11,15 +11,18 @@
         <meta property="og:type" content="website">
         <meta property="og:url" content="https://ninty9notout.github.io/hirenpatel/">
         <meta property="og:title" content="Hiren Patel CV 2021">
+        <meta property="og:site_name" content="Hiren Patel CV 2021">
         <meta property="og:description" content="Experienced full-stack developer specialising in high-traffic, API driven, and transactional applications, with extensive background in cultural institutions and, as of late, the world of online gambling.">
-        <meta property="og:image" content="https://ninty9notout.github.io/hirenpatel/IMG_20181216_203419.jpg">
+        <meta property="og:image" content="https://res.cloudinary.com/hieroishere/image/upload/c_fill,f_auto,g_auto,h_628,q_auto,w_1200/v1624381193/IMG_20181216_203419_Enhanced_k4oqwx.jpg">
 
         <!-- Twitter -->
-        <meta property="twitter:card" content="summary_large_image">
-        <meta property="twitter:url" content="https://ninty9notout.github.io/hirenpatel/">
-        <meta property="twitter:title" content="Hiren Patel CV 2021">
-        <meta property="twitter:description" content="Experienced full-stack developer specialising in high-traffic, API driven, and transactional applications, with extensive background in cultural institutions and, as of late, the world of online gambling.">
-        <meta property="twitter:image" content="https://ninty9notout.github.io/hirenpatel/IMG_20181216_203419.jpg">
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:url" content="https://ninty9notout.github.io/hirenpatel/">
+        <meta name="twitter:title" content="Hiren Patel CV 2021">
+        <meta name="twitter:description" content="Experienced full-stack developer specialising in high-traffic, API driven, and transactional applications, with extensive background in cultural institutions and, as of late, the world of online gambling.">
+        <meta name="twitter:image" content="https://res.cloudinary.com/hieroishere/image/upload/c_fill,f_auto,g_auto,h_628,q_auto,w_1200/v1624381193/IMG_20181216_203419_Enhanced_k4oqwx.jpg">
+        <meta name="twitter:creator" content="@hieroishere">
+        <meta name="twitter:site" content="@hieroishere"/>
 
         <!-- Favicons -->
         <link rel="icon" href="/favicon.ico">
@@ -59,6 +62,10 @@
 
             p {
                 margin: 0;
+            }
+
+            address {
+                font-style: normal;
             }
 
             a:link, a:visited {
@@ -170,7 +177,22 @@
                 margin-bottom: .5em;
             }
 
+            .summary__image {
+                display: block;
+                line-height: 0;
+                margin-bottom: 1em;
+            }
+
+            .summary__image img {
+                width: 100%;
+                height: auto;
+            }
+
             .summary p + p {
+                margin-top: 1em;
+            }
+
+            .summary p + address {
                 margin-top: 1em;
             }
 
@@ -343,14 +365,30 @@
     <body>
         <div class="container" itemscope itemtype="https://schema.org/Person">
             <div class="wrapper">
-                <div class="header">
+                <header class="header">
                     <h1 class="branding" itemprop="name">Hiren Patel</h1>
                     <p class="tagline" itemprop="jobTitle">Senior Full-stack Developer</p>
-                </div>
+                </header>
 
-                <div class="sidebar">
-                    <div class="section summary">
+                <div class="sidebar" role="complementary">
+                    <section class="section summary" aria-label="Hi, nice to meet you!">
                         <h2 class="section__heading">Hi, nice to meet you!</h2>
+
+                        <picture class="summary__image">
+                            <source media="(max-width: 420px)" srcset="https://res.cloudinary.com/hieroishere/image/upload/c_fill,dpr_1.0,f_auto,g_auto,h_220,q_auto,w_420/v1624381193/IMG_20181216_203419_Enhanced_k4oqwx.jpg, https://res.cloudinary.com/hieroishere/image/upload/c_fill,dpr_2.0,f_auto,g_auto,h_220,q_auto,w_420/v1624381193/IMG_20181216_203419_Enhanced_k4oqwx.jpg 2x">
+
+                            <source media="(min-width: 421px) and (max-width: 768px)" srcset="https://res.cloudinary.com/hieroishere/image/upload/c_fill,dpr_1.0,f_auto,g_auto,h_371,q_auto,w_708/v1624381193/IMG_20181216_203419_Enhanced_k4oqwx.jpg, https://res.cloudinary.com/hieroishere/image/upload/c_fill,dpr_2.0,f_auto,g_auto,h_371,q_auto,w_708/v1624381193/IMG_20181216_203419_Enhanced_k4oqwx.jpg 2x">
+
+                            <source media="(min-width: 769px) and (max-width: 1024px)" srcset="https://res.cloudinary.com/hieroishere/image/upload/c_fill,dpr_1.0,f_auto,g_auto,h_147,q_auto,w_281/v1624381193/IMG_20181216_203419_Enhanced_k4oqwx.jpg, https://res.cloudinary.com/hieroishere/image/upload/c_fill,dpr_2.0,f_auto,g_auto,h_147,q_auto,w_281/v1624381193/IMG_20181216_203419_Enhanced_k4oqwx.jpg 2x">
+
+                            <source media="(min-width: 1025px) and (max-width: 1366px)" srcset="https://res.cloudinary.com/hieroishere/image/upload/c_fill,dpr_1.0,f_auto,g_auto,h_196,q_auto,w_375/v1624381193/IMG_20181216_203419_Enhanced_k4oqwx.jpg, https://res.cloudinary.com/hieroishere/image/upload/c_fill,dpr_2.0,f_auto,g_auto,h_196,q_auto,w_375/v1624381193/IMG_20181216_203419_Enhanced_k4oqwx.jpg 2x">
+
+                            <source media="(min-width: 1367px) and (max-width: 1920px)" srcset="https://res.cloudinary.com/hieroishere/image/upload/c_fill,dpr_1.0,f_auto,g_auto,h_293,q_auto,w_560/v1624381193/IMG_20181216_203419_Enhanced_k4oqwx.jpg, https://res.cloudinary.com/hieroishere/image/upload/c_fill,dpr_2.0,f_auto,g_auto,h_293,q_auto,w_560/v1624381193/IMG_20181216_203419_Enhanced_k4oqwx.jpg 2x">
+
+                            <source media="(min-width: 1921px)" srcset="https://res.cloudinary.com/hieroishere/image/upload/c_fill,dpr_1.0,f_auto,g_auto,h_632,q_auto,w_1208/v1624381193/IMG_20181216_203419_Enhanced_k4oqwx.jpg, https://res.cloudinary.com/hieroishere/image/upload/c_fill,dpr_2.0,f_auto,g_auto,h_632,q_auto,w_1208/v1624381193/IMG_20181216_203419_Enhanced_k4oqwx.jpg 2x">
+
+                            <img src="https://res.cloudinary.com/hieroishere/image/upload/c_fill,dpr_2.0,f_auto,g_auto,h_220,q_auto,w_420/v1624381193/IMG_20181216_203419_Enhanced_k4oqwx.jpg" alt="Hiren Patel in Gardens by the Bay, Singapore, 16 December 2018">
+                        </picture>
 
                         <!-- <p itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
                             <span itemprop="streetAddress">6 Tanfield Road</span><br>
@@ -362,13 +400,13 @@
 
                         <p itemprop="description">I am an experienced full-stack developer with extensive background in high-traffic, API driven, and transactional applications. Throughout my career I've strived to be proficient at all aspects of development - be it creating efficient, cost-effective back-end systems or state of the art, pixel perfect front-end designs. I've led multiple cross-functional teams at a time in my capacity as a technical lead and senior developer to deliver world-class projects for well-established organisations around the&nbsp;globe.</p>
 
-                        <p>
+                        <address>
                             <a href="mailto:hieroishere@outlook.com"><span itemprop="email">hieroishere@outlook.com</span></a><br>
                             <a href="tel:+447707934908"><span itemprop="telephone">+44 7707 934908</span></a>
-                        </p>
-                    </div>
+                        </address>
+                    </section>
 
-                    <div class="section">
+                    <section class="section" aria-label="Education">
                         <h2 class="section__heading">Education</h2>
 
                         <ul class="education-list">
@@ -408,50 +446,50 @@
                                 <p>11 GCSE's including Mathematics, Science, and&nbsp;English.</p>
                             </li>
                         </ul>
-                    </div>
+                    </section>
 
-                    <div class="section">
+                    <section class="section" aria-label="Skills &amp; Expertise">
                         <h2 class="section__heading">Skills &amp; Expertise</h2>
 
                         <ul class="tag-list">
-                            <li class="tag-item">PHP</li>
-                            <li class="tag-item">Java</li>
-                            <li class="tag-item">SQL (multiple variants)</li>
-                            <li class="tag-item">Objective C</li>
-                            <li class="tag-item">C++</li>
-                            <li class="tag-item">.NET</li>
-                            <li class="tag-item">JavaScript</li>
-                            <li class="tag-item">Node.js</li>
-                            <li class="tag-item">jQuery</li>
-                            <li class="tag-item">React</li>
-                            <li class="tag-item">Angular</li>
-                            <li class="tag-item">Vue.js</li>
-                            <li class="tag-item">HTML</li>
-                            <li class="tag-item">CSS (Less, Sass, JSS)</li>
-                            <li class="tag-item">AWS</li>
-                            <li class="tag-item">SilverStripe (CMS, Framework)</li>
-                            <li class="tag-item">WordPress</li>
-                            <li class="tag-item">Craft CMS</li>
-                            <li class="tag-item">Kentico CMS</li>
-                            <li class="tag-item">Doctrine</li>
-                            <li class="tag-item">Symfony</li>
-                            <li class="tag-item">Web Standards</li>
-                            <li class="tag-item">Search Engine Optimization</li>
-                            <li class="tag-item">Software Engineering</li>
-                            <li class="tag-item">Database Design</li>
-                            <li class="tag-item">Database Analysis</li>
-                            <li class="tag-item">Solutions Architecture</li>
-                            <li class="tag-item">MVC Architecture</li>
-                            <li class="tag-item">Quality Assurance</li>
-                            <li class="tag-item">Rapid Prototyping</li>
-                            <li class="tag-item">Web Design</li>
-                            <li class="tag-item">UX Design</li>
+                            <li class="tag-item" itemprop="knowsAbout">PHP</li>
+                            <li class="tag-item" itemprop="knowsAbout">Java</li>
+                            <li class="tag-item" itemprop="knowsAbout">SQL (multiple variants)</li>
+                            <li class="tag-item" itemprop="knowsAbout">Objective C</li>
+                            <li class="tag-item" itemprop="knowsAbout">C++</li>
+                            <li class="tag-item" itemprop="knowsAbout">.NET</li>
+                            <li class="tag-item" itemprop="knowsAbout">JavaScript</li>
+                            <li class="tag-item" itemprop="knowsAbout">Node.js</li>
+                            <li class="tag-item" itemprop="knowsAbout">jQuery</li>
+                            <li class="tag-item" itemprop="knowsAbout">React</li>
+                            <li class="tag-item" itemprop="knowsAbout">Angular</li>
+                            <li class="tag-item" itemprop="knowsAbout">Vue.js</li>
+                            <li class="tag-item" itemprop="knowsAbout">HTML</li>
+                            <li class="tag-item" itemprop="knowsAbout">CSS (Less, Sass, JSS)</li>
+                            <li class="tag-item" itemprop="knowsAbout">AWS</li>
+                            <li class="tag-item" itemprop="knowsAbout">SilverStripe (CMS, Framework)</li>
+                            <li class="tag-item" itemprop="knowsAbout">WordPress</li>
+                            <li class="tag-item" itemprop="knowsAbout">Craft CMS</li>
+                            <li class="tag-item" itemprop="knowsAbout">Kentico CMS</li>
+                            <li class="tag-item" itemprop="knowsAbout">Doctrine</li>
+                            <li class="tag-item" itemprop="knowsAbout">Symfony</li>
+                            <li class="tag-item" itemprop="knowsAbout">Web Standards</li>
+                            <li class="tag-item" itemprop="knowsAbout">Search Engine Optimization</li>
+                            <li class="tag-item" itemprop="knowsAbout">Software Engineering</li>
+                            <li class="tag-item" itemprop="knowsAbout">Database Design</li>
+                            <li class="tag-item" itemprop="knowsAbout">Database Analysis</li>
+                            <li class="tag-item" itemprop="knowsAbout">Solutions Architecture</li>
+                            <li class="tag-item" itemprop="knowsAbout">MVC Architecture</li>
+                            <li class="tag-item" itemprop="knowsAbout">Quality Assurance</li>
+                            <li class="tag-item" itemprop="knowsAbout">Rapid Prototyping</li>
+                            <li class="tag-item" itemprop="knowsAbout">Web Design</li>
+                            <li class="tag-item" itemprop="knowsAbout">UX Design</li>
                         </ul>
-                    </div>
+                    </section>
                 </div>
 
-                <div class="main">
-                    <div class="section">
+                <div class="main" role="main">
+                    <section class="section" aria-label="Experience">
                         <h2 class="section__heading">Experience</h2>
 
                         <ul class="employment-list">
@@ -510,9 +548,9 @@
                                 </div>
                             </li>
                         </ul>
-                    </div>
+                    </section>
 
-                    <div class="section">
+                    <section class="section" aria-label="Projects">
                         <h2 class="section__heading">Projects</h2>
 
                         <ul class="project-list">
@@ -658,7 +696,7 @@
                                 </div>
                             </li>
                         </ul>
-                    </div>
+                    </section>
                 </div>
             </div>
         </div>
