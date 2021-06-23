@@ -39,11 +39,19 @@
             gtag('config', 'UA-27356779-1');
         </script>
 
-        <link rel="preconnect" href="https://fonts.gstatic.com">
-        <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
 
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous" referrerpolicy="no-referrer">
-        <link href="https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Poppins:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+        <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous" referrerpolicy="no-referrer">
+        <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Poppins:ital,wght@0,700;1,700&display=swap">
+
+        <link rel="stylesheet" media="print" onload="this.media='all'" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous" referrerpolicy="no-referrer">
+        <link rel="stylesheet" media="print" onload="this.media='all'" href="https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Poppins:ital,wght@0,700;1,700&display=swap">
+
+        <noscript>
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous" referrerpolicy="no-referrer">
+            <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Poppins:ital,wght@0,700;1,700&display=swap">
+        </noscript>
 
         <style>
             body {
@@ -166,6 +174,7 @@
                 background: -webkit-linear-gradient(top, rgba(245, 246, 250, 1) 0%, rgba(245, 246, 250, 1) 70%, rgba(245, 246, 250, 0) 100%); /* Chrome10-25,Safari5.1-6 */
                 background: linear-gradient(to bottom, rgba(245, 246, 250, 1) 0%, rgba(245, 246, 250, 1) 70%, rgba(245, 246, 250, 0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
                 position: sticky;
+                z-index: 1;
                 top: 0;
                 padding: 0.5555555556em 0.5555555556em 1em;
                 margin-top: -0.5555555556em;
@@ -184,12 +193,14 @@
                 width: 100%;
                 padding-top: 52.333333333333333%;
                 position: relative;
+                background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpath d='M11 17c-2.75 0-5 2.25-5 5v56c0 2.75 2.25 5 5 5h78c2.75 0 5-2.25 5-5V22c0-2.75-2.25-5-5-5zm0 2h78c1.68 0 3 1.32 3 3v43.9L73.62 51.23c-.32-.27-.83-.3-1.18-.06l-15.4 10.59-20.41-16.53c-.23-.2-.55-.28-.85-.22a1 1 0 00-.34.16L8 64.09V22c0-1.68 1.32-3 3-3zm46 12c-3.85 0-7 3.15-7 7s3.15 7 7 7 7-3.15 7-7-3.15-7-7-7zm-.5 2c.17-.02.33 0 .5 0 2.77 0 5 2.23 5 5s-2.23 5-5 5-5-2.23-5-5c0-2.6 1.97-4.75 4.5-5zM35.97 47.22l20.4 16.53c.33.27.84.3 1.2.06l15.37-10.56L92 68.47V78c0 1.68-1.32 3-3 3H11c-1.68 0-3-1.32-3-3V66.5z' fill='%23dcdde1'/%3E%3C/svg%3E") center center no-repeat;
             }
 
             .summary__image img {
                 width: 100%;
                 height: auto;
                 position: absolute;
+                z-index: 0;
                 top: 0;
                 left: 0;
             }
@@ -354,6 +365,10 @@
                     background: transparent;
                 }
 
+                .download {
+                    display: none;
+                }
+
                 .description p,
                 .description ul {
                     -webkit-column-break-inside: avoid;
@@ -380,20 +395,25 @@
                     <section class="section summary" aria-label="Hi, nice to meet you!">
                         <h2 class="section__heading">Hi, nice to meet you!</h2>
 
-                        <picture class="summary__image">
+                        <picture class="summary__image" itemprop="image" itemscope itemtype="https://schema.org/ImageObject">
+                            <meta itemprop="creator" content="Hiren Patel">
+                            <meta itemprop="contentLocation" content="Supertree Grove, Gardens by the Bay, Singapore">
+                            <meta itemprop="dateCreated" content="2018-12-16T20:24:00+08:00">
+                            <meta itemprop="description" content="This was taken on the night of arrival in Singapore. First trip to Singapore - they had an awesome Christmas installation at the Gardens.">
+
                             <source media="(max-width: 420px)" srcset="https://res.cloudinary.com/hieroishere/image/upload/c_fill,dpr_1.0,f_auto,g_auto,h_220,q_auto,w_420/v1624381193/IMG_20181216_203419_Enhanced_k4oqwx.jpg, https://res.cloudinary.com/hieroishere/image/upload/c_fill,dpr_2.0,f_auto,g_auto,h_220,q_auto,w_420/v1624381193/IMG_20181216_203419_Enhanced_k4oqwx.jpg 2x">
 
                             <source media="(min-width: 421px) and (max-width: 768px)" srcset="https://res.cloudinary.com/hieroishere/image/upload/c_fill,dpr_1.0,f_auto,g_auto,h_371,q_auto,w_708/v1624381193/IMG_20181216_203419_Enhanced_k4oqwx.jpg, https://res.cloudinary.com/hieroishere/image/upload/c_fill,dpr_2.0,f_auto,g_auto,h_371,q_auto,w_708/v1624381193/IMG_20181216_203419_Enhanced_k4oqwx.jpg 2x">
 
-                            <source media="(min-width: 769px) and (max-width: 1024px)" srcset="https://res.cloudinary.com/hieroishere/image/upload/c_fill,dpr_1.0,f_auto,g_auto,h_147,q_auto,w_281/v1624381193/IMG_20181216_203419_Enhanced_k4oqwx.jpg, https://res.cloudinary.com/hieroishere/image/upload/c_fill,dpr_2.0,f_auto,g_auto,h_147,q_auto,w_281/v1624381193/IMG_20181216_203419_Enhanced_k4oqwx.jpg 2x">
+                            <source media="(min-width: 769px) and (max-width: 1023px)" srcset="https://res.cloudinary.com/hieroishere/image/upload/c_fill,dpr_1.0,f_auto,g_auto,h_504,q_auto,w_963/v1624381193/IMG_20181216_203419_Enhanced_k4oqwx.jpg, https://res.cloudinary.com/hieroishere/image/upload/c_fill,dpr_2.0,f_auto,g_auto,h_504,q_auto,w_963/v1624381193/IMG_20181216_203419_Enhanced_k4oqwx.jpg 2x">
 
-                            <source media="(min-width: 1025px) and (max-width: 1366px)" srcset="https://res.cloudinary.com/hieroishere/image/upload/c_fill,dpr_1.0,f_auto,g_auto,h_196,q_auto,w_375/v1624381193/IMG_20181216_203419_Enhanced_k4oqwx.jpg, https://res.cloudinary.com/hieroishere/image/upload/c_fill,dpr_2.0,f_auto,g_auto,h_196,q_auto,w_375/v1624381193/IMG_20181216_203419_Enhanced_k4oqwx.jpg 2x">
+                            <source media="(min-width: 1024px) and (max-width: 1366px)" srcset="https://res.cloudinary.com/hieroishere/image/upload/c_fill,dpr_1.0,f_auto,g_auto,h_196,q_auto,w_375/v1624381193/IMG_20181216_203419_Enhanced_k4oqwx.jpg, https://res.cloudinary.com/hieroishere/image/upload/c_fill,dpr_2.0,f_auto,g_auto,h_196,q_auto,w_375/v1624381193/IMG_20181216_203419_Enhanced_k4oqwx.jpg 2x">
 
                             <source media="(min-width: 1367px) and (max-width: 1920px)" srcset="https://res.cloudinary.com/hieroishere/image/upload/c_fill,dpr_1.0,f_auto,g_auto,h_293,q_auto,w_560/v1624381193/IMG_20181216_203419_Enhanced_k4oqwx.jpg, https://res.cloudinary.com/hieroishere/image/upload/c_fill,dpr_2.0,f_auto,g_auto,h_293,q_auto,w_560/v1624381193/IMG_20181216_203419_Enhanced_k4oqwx.jpg 2x">
 
                             <source media="(min-width: 1921px)" srcset="https://res.cloudinary.com/hieroishere/image/upload/c_fill,dpr_1.0,f_auto,g_auto,h_632,q_auto,w_1208/v1624381193/IMG_20181216_203419_Enhanced_k4oqwx.jpg, https://res.cloudinary.com/hieroishere/image/upload/c_fill,dpr_2.0,f_auto,g_auto,h_632,q_auto,w_1208/v1624381193/IMG_20181216_203419_Enhanced_k4oqwx.jpg 2x">
 
-                            <img src="https://res.cloudinary.com/hieroishere/image/upload/c_fill,dpr_2.0,f_auto,g_auto,h_220,q_auto,w_420/v1624381193/IMG_20181216_203419_Enhanced_k4oqwx.jpg" alt="Hiren Patel in Gardens by the Bay, Singapore, 16 December 2018">
+                            <img src="https://res.cloudinary.com/hieroishere/image/upload/c_fill,dpr_2.0,f_auto,g_auto,h_220,q_auto,w_420/v1624381193/IMG_20181216_203419_Enhanced_k4oqwx.jpg" alt="Hiren Patel in Gardens by the Bay, Singapore, 16 December 2018" itemprop="contentUrl">
                         </picture>
 
                         <!-- <p itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
@@ -407,8 +427,8 @@
                         <p itemprop="description">I am an experienced full-stack developer with extensive background in high-traffic, API driven, and transactional applications. Throughout my career I've strived to be proficient at all aspects of development - be it creating efficient, cost-effective back-end systems or state of the art, pixel perfect front-end designs. I've led multiple cross-functional teams at a time in my capacity as a technical lead and senior developer to deliver world-class projects for well-established organisations around the&nbsp;globe.</p>
 
                         <address>
-                            <a href="mailto:hieroishere@outlook.com"><span itemprop="email">hieroishere@outlook.com</span></a><br>
-                            <a href="tel:+447707934908"><span itemprop="telephone">+44 7707 934908</span></a>
+                            <a href="mailto:hieroishere@outlook.com" data-event-category="Contact Link"><span itemprop="email">hieroishere@outlook.com</span></a><br>
+                            <a href="tel:+447707934908" data-event-category="Contact Link"><span itemprop="telephone">+44 7707 934908</span></a>
                         </address>
                     </section>
 
@@ -492,6 +512,10 @@
                             <li class="tag-item" itemprop="knowsAbout">UX Design</li>
                         </ul>
                     </section>
+
+                    <section class="section download" aria-label="Download PDF" itemprop="potentialAction" itemscope itemtype="https://schema.org/DownloadAction">
+                        <p>Want a digital copy for your records? Why not <a href="https://ninty9notout.github.io/hirenpatel/HirenPatelCV2021.pdf" data-event-category="Download Link" download itemprop="url">download a PDF version</a>.
+                    </section>
                 </div>
 
                 <div class="main" role="main">
@@ -499,7 +523,7 @@
                         <h2 class="section__heading">Experience</h2>
 
                         <ul class="employment-list">
-                            <li class="employment-item" itemprop="worksFor" itemscope itemtype="http://schema.org/EmployeeRole">
+                            <li class="employment-item" itemprop="worksFor" itemscope itemtype="https://schema.org/EmployeeRole">
                                 <h3 itemprop="roleName">Web Developer</h3>
 
                                 <h4 itemprop="worksFor" itemscope itemtype="https://schema.org/Organization">
@@ -526,7 +550,7 @@
                                 </div>
                             </li>
 
-                            <li class="employment-item" itemprop="worksFor" itemscope itemtype="http://schema.org/EmployeeRole">
+                            <li class="employment-item" itemprop="worksFor" itemscope itemtype="https://schema.org/EmployeeRole">
                                 <h3 itemprop="roleName">Lead Developer</h3>
 
                                 <h4 itemprop="worksFor" itemscope itemtype="https://schema.org/Organization">
@@ -715,6 +739,41 @@
                         .replace(/(?<before>[/~.,\-_?#%])/giu, '<wbr>$1')
                         .replace(/(?<beforeAndAfter>[=&])/giu, '<wbr>$1<wbr>');
                 }).join('//<wbr>');
+            });
+
+            function determineDestination(link) {
+                return link.host === location.host ? 'Internal Link' : 'External Link';
+            }
+
+            document.querySelectorAll('a').forEach(function (link) {
+                link.addEventListener('click', function (event) {
+                    event.preventDefault();
+
+                    var dataset = link.dataset;
+
+                    var action = dataset.eventAction || 'click';
+                    var category = dataset.eventCategory || determineDestination(link);
+                    var label = dataset.eventLabel || link.href;
+
+                    var called = false;
+
+                    function callback() {
+                        if (called) {
+                            return;
+                        }
+                        called = true;
+                        location.href = link.href;
+                    }
+
+                    setTimeout(callback, 1000);
+
+                    gtag('event', action, {
+                        event_category: category,
+                        event_label: label,
+                        event_callback: callback,
+                        transport_type: 'beacon'
+                    });
+                });
             });
         </script>
     </body>
