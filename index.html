@@ -775,6 +775,25 @@
                     });
                 });
             });
+
+            document.addEventListener('scroll', function () {
+                var body = document.body, documentElement = document.documentElement;
+
+                var scrollTop = window.pageYOffset || (document.compatMode === 'CSS1Compat' ? document.documentElement.scrollTop : document.body.scrollTop);
+                var scrollHeight = Math.max(document.documentElement['scrollHeight'], document.body['scrollHeight'], document.documentElement['offsetHeight'], document.body['offsetHeight'], document.documentElement['clientHeight']);
+                var clientHeight = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
+
+                var percentage = Math.round(scrollTop / (scrollHeight - clientHeight) * 100);
+
+                if ([20, 40, 60, 80, 100].indexOf(percentage) !== -1) {
+                    gtag('event', 'vertical', {
+                        event_category: 'Scrolling',
+                        event_label: `${percentage}%`,
+                        transport_type: 'beacon',
+                        non_interaction: true
+                    });
+                }
+            });
         </script>
     </body>
 </html>
